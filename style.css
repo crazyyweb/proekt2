@@ -1,0 +1,170 @@
+/* ===== Общий сброс и база ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  padding: 24px;
+}
+section {
+  margin-bottom: 40px;
+}
+h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+p.hint {
+  margin-bottom: 12px;
+  color: #777;
+  font-size: 14px;
+}
+.item {
+  padding: 16px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 60px;
+}
+
+/* ===== 1. Просто в ряд ===== */
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+/* ===== 2. Центрирование по обеим осям ===== */
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  border: 2px dashed #bbb;
+}
+.center-box .item {
+  background: #ffeb3b;
+}
+
+/* ===== 3. space-between ===== */
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.space-between .item {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+}
+
+/* ===== 4. Адаптивные карточки ===== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.card {
+  flex: 1 1 220px; /* база 220px, 
+  растут на равных, переносятся */
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+  margin-bottom: 8px;
+}
+
+/* ===== 5. Сайдбар + контент ===== */
+.layout {
+  display: flex;
+  gap: 16px;
+  min-height: 200px;
+}
+.sidebar {
+  width: 200px; /* фиксированная ширина */
+  flex-shrink: 0; /* не сжимается */
+  background: #333;
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+.content {
+  flex: 1; /* занимает всё оставшееся место */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* =====6. Шапка: логотип слева,
+ кнопки справа ===== */
+.header {
+  display: flex;
+  /* выстраиваем элементы в ряд */
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+.header .logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+.header .nav {
+  display: flex;
+  gap: 12px;
+}
+.header .nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.header .nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* =====7. Колонки разной роли 
+(классический "трёхколоночник") ===== */
+.columns {
+  display: flex;
+  gap: 16px;
+}
+.col-left,
+.col-right {
+  flex: 0 0 180px; /* фиксированные 
+  боковые колонки */
+  background: #e3f2fd;
+  padding: 16px;
+  border-radius: 8px;
+}
+.col-main {
+  flex: 1; /* растягивается на всё середину */
+  background: #fff3e0;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+}
+.item {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.item-fixed {
+  flex-basis: 200px;
+}
